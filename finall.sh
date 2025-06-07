@@ -14,3 +14,6 @@
  	echo path is not valid
  	exit 1
  fi
+ 
+ # clear backup.conf
+ > backup.conf
