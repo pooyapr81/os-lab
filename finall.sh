@@ -17,3 +17,8 @@
  
  # clear backup.conf
  > backup.conf
+ 
+ # search file
+ find "$backup_path" -type f -name "*$file_type" >> backup.conf
+ 
+ echo DONE
