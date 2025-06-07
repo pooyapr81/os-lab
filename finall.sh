@@ -7,4 +7,10 @@
  echo enter type of file
  read file_type
  
-
+ # path validation 
+ 
+ if [ ! -d "$backup_path" ]; then
+ 
+ 	echo path is not valid
+ 	exit 1
+ fi
