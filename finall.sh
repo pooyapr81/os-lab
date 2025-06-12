@@ -30,3 +30,4 @@ fi
  echo DONE
  
 timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
+backup_filename="backup_$timestamp.tar.gz"
