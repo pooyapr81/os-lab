@@ -2,6 +2,11 @@
 #finall.sh
 
 backup_output=$1
+if [ ! -d "$backup_output" ]; then
+	echo"creating dir..."
+	mkdir -p "$backup_output"
+fi
+
 # getting information
  echo enter path
  read backup_path
