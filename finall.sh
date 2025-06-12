@@ -31,3 +31,4 @@ fi
  
 timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
 backup_filename="backup_$timestamp.tar.gz"
+backup_full_path="$backup_output/$backup_filename"
