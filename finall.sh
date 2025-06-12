@@ -1,6 +1,7 @@
 #!/bin/bash
 #finall.sh
 
+backup_output=$1
 # getting information
  echo enter path
  read backup_path
@@ -22,3 +23,5 @@
  find "$backup_path" -type f -name "*$file_type" >> backup.conf
  
  echo DONE
+ 
+
