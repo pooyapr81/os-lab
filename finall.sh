@@ -50,3 +50,8 @@ if  tar -czf "$backup_full_path" -T backup.conf;then
 	echo "[$(date '+%Y-%m-%d %H:%N:%S')] backing up successfuly done: $backup_filename | size: $backup_size | duration: ${duration}s" >> "$log_file"
 	echo backing up successfuly done
 	echo bakcup log saved
+else
+		echo "[$(date '+%Y-%m-%d %H:%N:%S')] error executing backup operation $backup_path " >> "$loge_file"
+		echo error executing backup operation
+		exit 1
+fi
