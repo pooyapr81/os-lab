@@ -39,3 +39,4 @@ log_file="$backup_output/backup.log"
  
  echo backup created!
  
+start_time=$(date +%s)
