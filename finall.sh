@@ -1,6 +1,9 @@
 #!/bin/bash
 #finall.sh
 
+#number of days backups are kept
+days_to_kepp=7
+
 backup_output=$1
 if [ ! -d "$backup_output" ]; then
 	echo"creating dir..."
