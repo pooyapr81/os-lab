@@ -27,11 +27,13 @@ fi
  # search file
  find "$backup_path" -type f -name "*$file_type" >> backup.conf
  
+ 
  echo DONE
  
 timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
 backup_filename="backup_$timestamp.tar.gz"
 backup_full_path="$backup_output/$backup_filename"
+log_file="$backup_output/backup.log"
 
  tar -czf "$backup_full_path" -T backup.conf
  
