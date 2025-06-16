@@ -35,8 +35,13 @@ backup_filename="backup_$timestamp.tar.gz"
 backup_full_path="$backup_output/$backup_filename"
 log_file="$backup_output/backup.log"
 
- tar -czf "$backup_full_path" -T backup.conf
+# tar -czf "$backup_full_path" -T backup.conf
  
- echo backup created!
+# echo backup created!
  
 start_time=$(date +%s)
+
+if  tar -czf "$backup_full_path" -T backup.conf;then
+	end_time=$(date +%s)
+	duration=$((end_time - start_time))
+
