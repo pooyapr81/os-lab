@@ -2,7 +2,7 @@
 #finall.sh
 
 #number of days backups are kept
-days_to_kepp=7
+days_to_keep=7
 
 backup_output=$1
 if [ ! -d "$backup_output" ]; then
@@ -57,3 +57,8 @@ else
 		echo error executing backup operation
 		exit 1
 fi
+
+#delete older file
+echo "deleting fils that older than 7 days..."
+find "$backup_output" -name "backup_*.tar.gz" -type f -mtime +$days_to_keep -exec rm {} \; 
+echo deleted
