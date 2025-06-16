@@ -47,3 +47,6 @@ if  tar -czf "$backup_full_path" -T backup.conf;then
 	
 	#calculating backup file size
 	backup_size=$(du -h "$backup_full_path" | cut -f1)
+	echo "[$(date '+%Y-%m-%d %H:%N:%S')] backing up successfuly done: $backup_filename | size: $backup_size | duration: ${duration}s" >> "$log_file"
+	echo backing up successfuly done
+	echo bakcup log saved
