@@ -44,4 +44,6 @@ start_time=$(date +%s)
 if  tar -czf "$backup_full_path" -T backup.conf;then
 	end_time=$(date +%s)
 	duration=$((end_time - start_time))
-
+	
+	#calculating backup file size
+	backup_size=$(du -h "$backup_full_path" | cut -f1)
