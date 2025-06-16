@@ -29,19 +29,18 @@ fi
  
  
  echo DONE
- 
+
+#generate backup file name with date and time 
 timestamp=$(date "+%Y-%m-%d_%H-%M-%S")
 backup_filename="backup_$timestamp.tar.gz"
 backup_full_path="$backup_output/$backup_filename"
 log_file="$backup_output/backup.log"
 
-# tar -czf "$backup_full_path" -T backup.conf
- 
-# echo backup created!
- 
+# start time
 start_time=$(date +%s)
 
 if  tar -czf "$backup_full_path" -T backup.conf;then
+	#end time
 	end_time=$(date +%s)
 	duration=$((end_time - start_time))
 	
